@@ -122,11 +122,10 @@ class MainWindow(QMainWindow):
             self.label_info.setText("Account created successfully!")
 
     def check_password(self, username, password):
-        #* checks if password is correct and if user exists
-        if username in user:
-            stored_password = self.decrypt(user[username])
-            return stored_password == password
-        return False
+        #* checks if password is correct 
+        stored_password = self.decrypt(user[username])
+        return stored_password == password
+
     
     def check_user(self, username):
         #* checks if user exists or not
